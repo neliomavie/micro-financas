@@ -79,7 +79,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Sistema De Gestão De Micro - finanças
+                Sistema De Gestão
             </div>
 
             <div class="links">
