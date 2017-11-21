@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome_2');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/clientes/', 'ClienteController');
+
+Route::resource('/emprestimos/', 'EmprestimoController');
