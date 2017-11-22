@@ -96,7 +96,7 @@
 										</div>
 										<select id="id_cliente" name="id_cliente" class="form-control">
 											@foreach($clientes as $cliente)
-											<option>{{$cliente->nome}}</option>
+											<option>{{$cliente}}</option>
 											@endforeach
 										</select>
 									</div>
