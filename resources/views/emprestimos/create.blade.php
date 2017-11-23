@@ -12,8 +12,7 @@
 
 					<form action="/emprestimos" method="POST">
 						{{ csrf_field() }}
-
-
+						
 						<input name="estado" type="hidden" value="desactivado" class="form-control pull-right" id="estado">
 
 						<input name="id_usuario" type="hidden" value="{{Auth::user()->id}}" class="form-control pull-right" id="id_usuario">
@@ -96,7 +95,7 @@
 										</div>
 										<select id="id_cliente" name="id_cliente" class="form-control">
 											@foreach($clientes as $cliente)
-											<option>{{$cliente}}</option>
+											<option>{{$cliente->nome}}</option>
 											@endforeach
 										</select>
 									</div>
