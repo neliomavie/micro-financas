@@ -65,7 +65,7 @@
         			<!-- logo -->
         			<a class="navbar-brand" href="#body">
         				<h1 id="logo">
-        					<img src="/brand/img/logo.png" alt="Brandi">
+        					<img src="/brand/img/logo-2.png" alt="Brandi">
         				</h1>
         			</a>
         			<!-- /logo -->
