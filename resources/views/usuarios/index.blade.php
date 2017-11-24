@@ -35,29 +35,26 @@
 									<table class="table table-hover">
 										<tr>
 											<th>#</th>
-											<th>Nome Cliente</th>
-											<th>Modalidade De Pagamento</th>
-											<th>Data de Empréstimo</th>
-											<th>Data de Devolução</th>
-											<th>Valor do Empréstimo</th>
+											<th>Nome do Usuário</th>
+											<th>Data de Registo</th>
 											<th>estado</th>
 											<th>Acções</th>
 										</tr>
-										@foreach($emprestimos as $emprestimo)
+										@foreach($usuarios as $usuario)
 										<tr>
 											<td>#</td>
-											<td>{{$emprestimo->cliente}}</td>
-											<td>{{$emprestimo->modalidade}}</td>
-											<td>{{$emprestimo->data_emprestimo}}</td>
-											<td>{{$emprestimo->data_devolucao}}</td>
-											<td>{{$emprestimo->valor}}</td>
-											<td>{{$emprestimo->estado}}</td>
+											<td>{{$usuario->name}}</td>
+											<td>{{$usuario->created_at}}</td>
+											<td>{{$usuario->estado}}</td>
 											<td>
-												<button type="submit" class="btn btn-success"><i class="fa fa-toggle-on"></i> On
-												</button>
-												<button type="submit" class="btn btn-danger"><i class="fa fa-toggle-off"></i> Off
-												</button>
-
+												<form method="POST" action="/usuarios/{{$usuario->id}}">
+													@if($usuario->estado=='off')
+													<a class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</a>
+													@else
+													<a class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</a>
+													@endif
+												</form>
+												
 											</td>
 										</tr>
 										@endforeach

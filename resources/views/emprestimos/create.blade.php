@@ -15,8 +15,6 @@
 
 						<input name="estado" type="hidden" value="desactivado" class="form-control pull-right" id="estado">
 
-						<input name="data_emprestimo" type="hidden" value="{{now()}}" class="form-control pull-right">
-
 						<input name="usuario_id" type="hidden" value="{{Auth::user()->id}}" class="form-control pull-right" id="usuario_id">
 
 						<div class="row">

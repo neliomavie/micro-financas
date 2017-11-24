@@ -19,7 +19,6 @@ class CreateEmprestimosTable extends Migration
             $table->double('valor');
             $table->String('modalidade');
             $table->String('estado');
-            $table->String('data_emprestimo');
             $table->String('data_devolucao');
 
             $table->String('cliente');

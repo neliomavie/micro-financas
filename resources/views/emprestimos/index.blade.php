@@ -48,7 +48,7 @@
 											<td>#</td>
 											<td>{{$emprestimo->cliente}}</td>
 											<td>{{$emprestimo->modalidade}}</td>
-											<td>{{$emprestimo->data_emprestimo}}</td>
+											<td>{{$emprestimo->created_at}}</td>
 											<td>{{$emprestimo->data_devolucao}}</td>
 											<td>{{$emprestimo->valor}}</td>
 											<td>{{$emprestimo->estado}}</td>

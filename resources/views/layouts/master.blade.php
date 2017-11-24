@@ -91,7 +91,7 @@
         			</li>
         			@else
         			<li class="current"><a href="{{ route('login') }}">Entrar</a></li>
-        			<li><a href="{{ route('register') }}">Registar</a></li>
+        			{{-- <li><a href="{{ route('register') }}">Registar</a></li> --}}
         			@endauth
         		</ul>
         		@endif

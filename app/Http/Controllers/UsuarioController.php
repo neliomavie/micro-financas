@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Cliente;
+use App\user;
 
-class ClienteController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::all();
-        return view('clientes.index', compact('clientes'));
+        $usuarios = User::all();
+        return view('usuarios.index', compact('usuarios'));
     }
 
     /**
@@ -25,7 +25,8 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('clientes.create');
+        $usuarios = User::all();
+        return view('usuarios.create', compact('usuarios'));
     }
 
     /**
@@ -37,9 +38,9 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-        Cliente::create($request->all());
+        User::create($request->all());
 
-        return redirect('clientes');
+        return redirect('usuarios');
     }
 
     /**
@@ -50,9 +51,7 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        // $cliente = Cliente::findOrFail($id)->get();
-        // dd($cliente);
-        return $id;
+        //
     }
 
     /**

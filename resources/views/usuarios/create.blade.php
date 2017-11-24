@@ -5,30 +5,26 @@
 	<div class="row">
 		<div class="col-md-11">
 			<div class="panel panel-default">
-				<div class="panel-heading">Efectuar Empréstimo</div>
+				<div class="panel-heading">Registar Usuário</div>
 
 				<div class="panel-body">
 
 
-					<form action="/emprestimos" method="POST">
+					<form action="/usuarios" method="POST">
 						{{ csrf_field() }}
 
-						<input name="estado" type="hidden" value="desactivado" class="form-control pull-right" id="estado">
-
-						<input name="data_emprestimo" type="hidden" value="{{now()}}" class="form-control pull-right">
-
-						<input name="usuario_id" type="hidden" value="{{Auth::user()->id}}" class="form-control pull-right" id="usuario_id">
+						<input name="estado" type="hidden" value="off" class="form-control pull-right" id="estado">
 
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label>Descrição:</label>
+									<label>Nome:</label>
 
 									<div class="input-group date">
 										<div class="input-group-addon">
 											<i class="fa fa-user"></i>
 										</div>
-										<input name="descricao" type="text" class="form-control pull-right" id="descricao">
+										<input name="name" type="text" class="form-control pull-right" id="name">
 									</div>
 									<!-- /.input group -->
 								</div>
@@ -37,12 +33,12 @@
 							<!-- /.col-lg-6 -->
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label>Valor:</label>
+									<label>E-Mail Address:</label>
 									<div class="input-group date">
 										<div class="input-group-addon">
-											<i class="fa fa-dollar"></i>
+											<i class="fa fa-envelope-o "></i>
 										</div>
-										<input name="valor" type="text" class="form-control pull-right" id="valor">
+										<input name="email" type="text" class="form-control pull-right" id="email">
 									</div>
 									<!-- /.input group -->
 								</div>
@@ -55,19 +51,12 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label>Modalidade de Pagamento:</label>
-
+									<label>Password:</label>
 									<div class="input-group date">
 										<div class="input-group-addon">
-											<i class="fa  fa-ellipsis-h"></i>
+											<i class="fa fa-key"></i>
 										</div>
-										<select id="modalidade" name="modalidade" class="form-control">
-											<option>Prestação (3 meses)</option>
-											<option>Prestação (5 meses)</option>
-											<option>Prestação (8 meses)</option>
-											<option>Prestação (10 meses)</option>
-											<option>Prestação (1 ano)</option>
-										</select>
+										<input name="password" type="text" class="form-control pull-right" id="Password">
 									</div>
 									<!-- /.input group -->
 								</div>
@@ -75,33 +64,12 @@
 
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label>Data De Devolução:</label>
+									<label>Confirm Password:</label>
 									<div class="input-group date">
 										<div class="input-group-addon">
-											<i class="fa fa-calendar"></i>
+											<i class="fa fa-key"></i>
 										</div>
-										<input name="data_devolucao" type="date" class="form-control pull-right" id="data_devolucao">
-									</div>
-									<!-- /.input group -->
-								</div>
-							</div>
-						</div>
-						<!-- /.row -->
-
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label>Cliente:</label>
-
-									<div class="input-group date">
-										<div class="input-group-addon">
-											<i class="fa  fa-user"></i>
-										</div>
-										<select id="cliente" name="cliente" class="form-control">
-											@foreach($clientes as $cliente)
-											<option>{{$cliente->nome}}</option>
-											@endforeach
-										</select>
+										<input name="password-confirm" type="text" class="form-control pull-right" id="password-confirm">
 									</div>
 									<!-- /.input group -->
 								</div>

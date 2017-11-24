@@ -15,6 +15,8 @@ Registar
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
+                        <input name="estado" type="hidden" value="off" class="form-control pull-right" id="estado">
+
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
