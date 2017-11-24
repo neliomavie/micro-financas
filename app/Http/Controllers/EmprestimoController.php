@@ -38,10 +38,9 @@ class EmprestimoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        Cliente::create($request->all());
+        Emprestimo::create($request->all());
 
-        return redirect('clientes');
+        return redirect('emprestimos');
     }
 
     /**

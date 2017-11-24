@@ -22,8 +22,7 @@ class CreateEmprestimosTable extends Migration
             $table->String('data_emprestimo');
             $table->String('data_devolucao');
 
-            $table->integer('id_cliente')->unsigned();
-            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
+            $table->String('cliente');
 
             $table->integer('usuario_id')->unsigned();
             $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
