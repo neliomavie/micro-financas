@@ -53,13 +53,11 @@
                                 <td>{{$cliente->telefone}}</td>
                                 <td>{{$cliente->estado}}</td>
                                 <td>
-                                    <form method="GET" action="/clientes/{{$cliente->id}}">
-                                        @if($cliente->estado=='off')
-                                        <button class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</button>
-                                        @else
-                                        <button class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</button>
-                                        @endif
-                                    </form>
+                                    @if($cliente->estado=='off')
+                                    <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</a>
+                                    @else
+                                    <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</a>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach

@@ -8,7 +8,18 @@
 				<div class="panel-heading">Efectuar Empréstimo</div>
 
 				<div class="panel-body">
-
+					
+					@if(session()->has('message'))
+					<div class="alert alert-success">
+						{{ session()->get('message') }}
+					</div>
+					@else
+					@if(session()->has('message'))
+					<div class="alert alert-danger">
+						{{ session()->get('message') }}
+					</div>
+					@endif
+					@endif
 
 					<form action="/emprestimos" method="POST">
 						{{ csrf_field() }}

@@ -37,10 +37,17 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        User::create($request->all());
 
-        return redirect('usuarios');
+        $message_s='Usuario Registado com sucesso';
+        $message_e='As senhas nao sao as mesmas';
+
+        // dd($request);
+        if($request->password==$request->password_confirm){
+            User::create($request->all());
+            return redirect('/usuarios/create')->with('message',$message_s);
+        }else{
+            return redirect('/usuarios/create')->with('message',$message_e);
+        }
     }
 
     /**

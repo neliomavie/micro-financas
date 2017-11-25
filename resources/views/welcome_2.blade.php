@@ -9,7 +9,7 @@
 	<!-- Always force latest IE rendering engine or request Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!-- Page Title -->
-	<title>Finnance</title>		
+	<title>Finance</title>		
 	<!-- Meta Description -->
 	<meta name="description" content="Blue One Page Creative HTML5 Template">
 	<meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -42,13 +42,6 @@
 		</head>
 
 		<body id="body">
-
-			<!-- preloader -->
-			<div id="preloader">
-				<img src="/brand/img/preloader.gif" alt="Preloader">
-			</div>
-			<!-- end preloader -->
-
         <!-- 
         Fixed Navigation
         ==================================== -->
@@ -65,7 +58,7 @@
         			<!-- logo -->
         			<a class="navbar-brand" href="#body">
         				<h1 id="logo">
-        					<img src="/brand/img/logo-2.png" alt="Brandi">
+        					<img src="/brand/img/logo-5.png" alt="Brandi">
         				</h1>
         			</a>
         			<!-- /logo -->
@@ -74,7 +67,7 @@
         		<!-- main nav -->
         		<nav class="collapse navbar-collapse navbar-right" role="navigation">
         			<ul id="nav" class="nav navbar-nav">
-        				<li class="current"><a href="#body">Home</a></li>
+        				<li class="current"><a href="/">Home</a></li>
         			</ul>
 
         			@if (Route::has('login'))

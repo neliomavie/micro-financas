@@ -26,8 +26,16 @@ class EmprestimoController extends Controller
      */
     public function create()
     {
+        $message_s='Emprestimo Efetuado com sucesso';
+        $message_e='Emprestimo falhou';
+
         $clientes = Cliente::all();
-        return view('emprestimos.create', compact('clientes'));
+
+        if (count($clientes)==0) {
+            return view('emprestimos.create', compact('clientes'))->with('message', $message_e);
+        }else{
+            return view('emprestimos.create', compact('clientes'))->with('message', $message_s);;
+        }
     }
 
     /**

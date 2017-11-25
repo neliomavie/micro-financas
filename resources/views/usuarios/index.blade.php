@@ -18,7 +18,7 @@
 						<div class="col-xs-12">
 							<div class="box">
 								<div class="box-header">
-									<h3 class="box-title">Clientes</h3>
+									<h3 class="box-title">Outros Usuarios</h3>
 
 									<div class="box-tools">
 										<div class="input-group input-group-sm" style="width: 150px;">
@@ -41,6 +41,7 @@
 											<th>Acções</th>
 										</tr>
 										@foreach($usuarios as $usuario)
+										@if(Auth::user()!=$usuario)
 										<tr>
 											<td>#</td>
 											<td>{{$usuario->name}}</td>
@@ -57,6 +58,7 @@
 												
 											</td>
 										</tr>
+										@endif
 										@endforeach
 									</table>
 								</div>

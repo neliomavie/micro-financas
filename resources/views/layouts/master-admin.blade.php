@@ -45,7 +45,7 @@
 			<!-- Logo -->
 			<a href="index2.html" class="logo">
 				<!-- mini logo for sidebar mini 50x50 pixels -->
-				<span class="logo-mini"><b>A</b>LT</span>
+				<span class="logo-mini">MF</span>
 				<!-- logo for regular state and mobile devices -->
 				<span class="logo-lg"><b>Micro-Finanças</b></span>
 			</a>
@@ -114,7 +114,7 @@
 			<!-- sidebar menu: : style can be found in sidebar.less -->
 			<ul class="sidebar-menu" data-widget="tree">
 				<li class="header"><i class="fa fa-dashboard"></i> Menu</li>
-				<li class="active treeview">
+				<li class="treeview">
 					<a href="#">
 						<i class="fa  fa-th-large"></i> <span>Empréstimo</span>
 						<span class="pull-right-container">

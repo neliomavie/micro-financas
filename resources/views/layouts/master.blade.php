@@ -9,7 +9,7 @@
 	<!-- Always force latest IE rendering engine or request Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<!-- Page Title -->
-	<title>Finnance</title>		
+	<title>Finance</title>		
 	<!-- Meta Description -->
 	<meta name="description" content="Blue One Page Creative HTML5 Template">
 	<meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -43,12 +43,6 @@
 
 		<body id="body">
 
-			<!-- preloader -->
-			<div id="preloader">
-				<img src="/brand/img/preloader.gif" alt="Preloader">
-			</div>
-			<!-- end preloader -->
-
         <!-- 
         Fixed Navigation
         ==================================== -->
@@ -65,7 +59,7 @@
         			<!-- logo -->
         			<a class="navbar-brand" href="#body">
         				<h1 id="logo">
-        					<img src="/brand/img/logo.png" alt="Brandi">
+        					<img src="/brand/img/logo-5.png" alt="Brandi">
         				</h1>
         			</a>
         			<!-- /logo -->
@@ -73,6 +67,9 @@
 
         		<!-- main nav -->
         		<nav class="collapse navbar-collapse navbar-right" role="navigation">
+        			<ul id="nav" class="nav navbar-nav">
+        				<li class="current"><a href="/">Home</a></li>
+        			</ul>
 
         			@if (Route::has('login'))
         			<ul id="nav" class="nav navbar-nav">
@@ -118,7 +115,6 @@
 
         			<div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
         				<h2>@yield('title')</h2>
-        				<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
         			</div>
 
         			<!-- service item -->
@@ -139,68 +135,6 @@
         <!--
         End Features
         ==================================== -->
-
-
-
-
-        <footer id="footer" class="footer">
-        	<div class="container">
-        		<div class="row">
-
-        			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
-        				<div class="footer-single">
-        					<img src="img/footer-logo.png" alt="">
-        					<p>eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        				</div>
-        			</div>
-
-        			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
-        				<div class="footer-single">
-        					<h6>Subscribe </h6>
-        					<form action="#" class="subscribe">
-        						<input type="text" name="subscribe" id="subscribe">
-        						<input type="submit" value="&#8594;" id="subs">
-        					</form>
-        					<p>eusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        				</div>
-        			</div>
-
-        			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="600ms">
-        				<div class="footer-single">
-        					<h6>Explore</h6>
-        					<ul>
-        						<li><a href="#">Inside Us</a></li>
-        						<li><a href="#">Flickr</a></li>
-        						<li><a href="#">Google</a></li>
-        						<li><a href="#">Forum</a></li>
-        					</ul>
-        				</div>
-        			</div>
-
-        			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="900ms">
-        				<div class="footer-single">
-        					<h6>Support</h6>
-        					<ul>
-        						<li><a href="#">Contact Us</a></li>
-        						<li><a href="#">Market Blog</a></li>
-        						<li><a href="#">Help Center</a></li>
-        						<li><a href="#">Pressroom</a></li>
-        					</ul>
-        				</div>
-        			</div>
-
-        		</div>
-        		<div class="row">
-        			<div class="col-md-12">
-        				<p class="copyright text-center">
-        					Copyright © 2015 <a href="http://themefisher.com/">Themefisher</a>. All rights reserved. Designed & developed by <a href="http://themefisher.com/">Themefisher</a>
-        				</p>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-
-        <a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
 
 		<!-- Essential jQuery Plugins
 			================================================== -->
@@ -242,62 +176,5 @@
 			</script> 
 			<!-- Custom Functions -->
 			<script src="/brand/js/custom.js"></script>
-
-			<script type="text/javascript">
-				$(function(){
-					/* ========================================================================= */
-				/*	Contact Form
-				/* ========================================================================= */
-				
-				$('#contact-form').validate({
-					rules: {
-						name: {
-							required: true,
-							minlength: 2
-						},
-						email: {
-							required: true,
-							email: true
-						},
-						message: {
-							required: true
-						}
-					},
-					messages: {
-						name: {
-							required: "come on, you have a name don't you?",
-							minlength: "your name must consist of at least 2 characters"
-						},
-						email: {
-							required: "no email, no message"
-						},
-						message: {
-							required: "um...yea, you have to write something to send this form.",
-							minlength: "thats all? really?"
-						}
-					},
-					submitHandler: function(form) {
-						$(form).ajaxSubmit({
-							type:"POST",
-							data: $(form).serialize(),
-							url:"process.php",
-							success: function() {
-								$('#contact-form :input').attr('disabled', 'disabled');
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$(this).find(':input').attr('disabled', 'disabled');
-									$(this).find('label').css('cursor','default');
-									$('#success').fadeIn();
-								});
-							},
-							error: function() {
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$('#error').fadeIn();
-								});
-							}
-						});
-					}
-				});
-			});
-		</script>
-	</body>
-	</html>
+		</body>
+		</html>

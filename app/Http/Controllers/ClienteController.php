@@ -52,7 +52,7 @@ class ClienteController extends Controller
     {
         // $cliente = Cliente::findOrFail($id)->get();
         // dd($cliente);
-        return $id;
+        return "hshhshsh";
     }
 
     /**
@@ -63,7 +63,7 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "hshhshsh";
     }
 
     /**
