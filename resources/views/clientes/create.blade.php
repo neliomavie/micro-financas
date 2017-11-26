@@ -14,7 +14,7 @@
                         {{ csrf_field() }}
 
 
-                        <input name="estado" type="hidden" value="desactivado" class="form-control pull-right" id="estado">
+                        <input name="estado" type="hidden" value="Off" class="form-control pull-right" id="estado">
 
 
                         <div class="row">

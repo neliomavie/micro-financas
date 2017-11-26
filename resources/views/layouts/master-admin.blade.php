@@ -126,6 +126,35 @@
 						<li class="active"><a href="/emprestimos"><i class="fa fa-list"></i> Ver Emrestimos</a></li>
 					</ul>
 				</li>
+
+				<li class="treeview">
+					<a href="#">
+						<i class="fa fa-user-secret"></i>
+						<span>Clientes</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu">
+						<li><a href="/clientes/create"><i class="fa fa-plus"></i> Registar Cliente</a></li>
+						<li><a href="/clientes"><i class="fa fa-list"></i> Ver Clientes</a></li>
+					</ul>
+				</li>
+
+				<li class="treeview">
+					<a href="#">
+						<i class="fa fa-home"></i>
+						<span>Bens</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu">
+						<li><a href="/bens/create"><i class="fa fa-plus"></i> Registar Bens</a></li>
+						<li><a href="/bens"><i class="fa fa-list"></i> Ver Lista de Bens</a></li>
+					</ul>
+				</li>
+
 				<li class="treeview">
 					<a href="#">
 						<i class="fa  fa-users"></i>
@@ -139,19 +168,7 @@
 						<li><a href="/usuarios"><i class="fa fa-list"></i> Ver usuários</a></li>
 					</ul>
 				</li>
-				<li class="treeview">
-					<a href="#">
-						<i class="fa  fa-users"></i>
-						<span>Clientes</span>
-						<span class="pull-right-container">
-							<i class="fa fa-angle-left pull-right"></i>
-						</span>
-					</a>
-					<ul class="treeview-menu">
-						<li><a href="/clientes/create"><i class="fa fa-plus"></i> Registar Cliente</a></li>
-						<li><a href="/clientes"><i class="fa fa-list"></i> Ver Clientes</a></li>
-					</ul>
-				</li>
+
 
 			</ul>
 		</section>

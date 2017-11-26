@@ -21,10 +21,20 @@
 					@endif
 					@endif
 
+					@if ($errors->any())
+					<div class="alert alert-danger">
+						<ul>
+							@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div><br />
+					@endif
+
 					<form action="/emprestimos" method="POST">
 						{{ csrf_field() }}
 
-						<input name="estado" type="hidden" value="desactivado" class="form-control pull-right" id="estado">
+						<input name="estado" type="hidden" value="Off" class="form-control pull-right" id="estado">
 
 						<input name="usuario_id" type="hidden" value="{{Auth::user()->id}}" class="form-control pull-right" id="usuario_id">
 

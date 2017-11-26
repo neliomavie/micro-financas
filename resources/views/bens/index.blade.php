@@ -18,7 +18,7 @@
 						<div class="col-xs-12">
 							<div class="box">
 								<div class="box-header">
-									<h3 class="box-title">Emprestimos</h3>
+									<h3 class="box-title">Clientes</h3>
 
 									<div class="box-tools">
 										<div class="input-group input-group-sm" style="width: 150px;">
@@ -36,28 +36,28 @@
 										<tr>
 											<th>#</th>
 											<th>Nome Cliente</th>
-											<th>Modalidade De Pagamento</th>
-											<th>Data de Empréstimo</th>
-											<th>Data de Devolução</th>
-											<th>Valor do Empréstimo</th>
+											<th>Endereço</th>
+											<th>Data de Nascimento</th>
+											<th>BI</th>
+											<th>Telefone</th>
 											<th>estado</th>
 											<th>Acções</th>
 										</tr>
-										@foreach($emprestimos as $emprestimo)
+										@foreach($clientes as $cliente)
 										<tr>
 											<td>#</td>
-											<td>{{$emprestimo->cliente}}</td>
-											<td>{{$emprestimo->modalidade}}</td>
-											<td>{{$emprestimo->created_at}}</td>
-											<td>{{$emprestimo->data_devolucao}}</td>
-											<td>{{$emprestimo->valor}}</td>
-											<td>{{$emprestimo->estado}}</td>
+											<td>{{$cliente->nome}}</td>
+											<td>{{$cliente->endereco}}</td>
+											<td>{{$cliente->data}}</td>
+											<td>{{$cliente->bi}}</td>
+											<td>{{$cliente->telefone}}</td>
+											<td>{{$cliente->estado}}</td>
 											<td>
-												<button type="submit" class="btn btn-success"><i class="fa fa-toggle-on"></i> On
-												</button>
-												<button type="submit" class="btn btn-danger"><i class="fa fa-toggle-off"></i> Off
-												</button>
-
+												@if($cliente->estado=='off')
+												<a href="/clientes/{{$cliente->id}}/edit" class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</a>
+												@else
+												<a href="/clientes/{{$cliente->id}}/edit" class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</a>
+												@endif
 											</td>
 										</tr>
 										@endforeach

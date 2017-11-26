@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Emprestimo;
-use App\Cliente;
 
-class EmprestimoController extends Controller
+class BemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class EmprestimoController extends Controller
      */
     public function index()
     {
-        $emprestimos = Emprestimo::all();
-        return view('emprestimos.index', compact('emprestimos'));
+        return view('bens.index');
     }
 
     /**
@@ -26,16 +23,7 @@ class EmprestimoController extends Controller
      */
     public function create()
     {
-        $message_s='Emprestimo Efetuado com sucesso';
-        $message_e='Emprestimo falhou';
-
-        $clientes = Cliente::all();
-
-        if (count($clientes)==0) {
-            return view('emprestimos.create', compact('clientes'))->with('message', $message_e);
-        }else{
-            return view('emprestimos.create', compact('clientes'))->with('message', $message_s);;
-        }
+        return view('bens.create');
     }
 
     /**
@@ -46,13 +34,7 @@ class EmprestimoController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'valor' => 'numeric|required'
-        ]);
-
-        Emprestimo::create($request->all());
-
-        return redirect('emprestimos');
+        //
     }
 
     /**

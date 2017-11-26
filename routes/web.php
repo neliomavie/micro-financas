@@ -17,8 +17,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/clientes/', 'ClienteController')->middleware('autenticacao');
+Route::resource('/clientes', 'ClienteController')->middleware('autenticacao');
 
-Route::resource('/emprestimos/', 'EmprestimoController')->middleware('autenticacao');
+Route::resource('/emprestimos', 'EmprestimoController')->middleware('autenticacao');
 
-Route::resource('/usuarios/', 'UsuarioController')->middleware('autenticacao');
+Route::resource('/usuarios', 'UsuarioController')->middleware('autenticacao');
+
+Route::resource('/bens', 'BemController')->middleware('autenticacao');
+
