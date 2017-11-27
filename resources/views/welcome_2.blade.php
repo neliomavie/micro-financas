@@ -56,7 +56,7 @@
         			<!-- /responsive nav button -->
 
         			<!-- logo -->
-        			<a class="navbar-brand" href="#body">
+        			<a class="navbar-brand" href="/">
         				<h1 id="logo">
         					<img src="/brand/img/logo-5.png" alt="Brandi">
         				</h1>
@@ -67,7 +67,7 @@
         		<!-- main nav -->
         		<nav class="collapse navbar-collapse navbar-right" role="navigation">
         			<ul id="nav" class="nav navbar-nav">
-        				<li class="current"><a href="/">Home</a></li>
+        				<li><a href="/"></a></li>
         			</ul>
 
         			@if (Route::has('login'))
@@ -86,8 +86,9 @@
         				</form>
         			</li>
         			@else
+        			<li><a href="/">Home</a></li>
         			<li class="current"><a href="{{ route('login') }}">Entrar</a></li>
-        			{{-- <li><a href="{{ route('register') }}">Registar</a></li> --}}
+        			
         			@endauth
         		</ul>
         		@endif
@@ -112,68 +113,68 @@
         		<!-- Indicators bullet -->
         		<ol class="carousel-indicators">
         			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-                <!-- End Indicators bullet -->				
+        			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        		</ol>
+        		<!-- End Indicators bullet -->				
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
+        		<!-- Wrapper for slides -->
+        		<div class="carousel-inner" role="listbox">
 
-                 <!-- single slide -->
-                 <div class="item active" style="background-image: url(/brand/img/img-8.jpg);">
-                    <div class="carousel-caption">
-                       <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
-                       <b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
-                       {{--  <p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p> --}}
+        			<!-- single slide -->
+        			<div class="item active" style="background-image: url(/brand/img/img-8.jpg);">
+        				<div class="carousel-caption">
+        					<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
+        					<b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
+        					{{--  <p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p> --}}
 
-                       <ul class="social-links text-center">
-                          <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                          <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                          <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                          <li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-              <!-- end single slide -->
+        					<ul class="social-links text-center">
+        						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+        					</ul>
+        				</div>
+        			</div>
+        			<!-- end single slide -->
 
-              <!-- single slide -->
-              <div class="item" style="background-image: url(/brand/img/img-10.jpg);">
-                <div class="carousel-caption">
-                   <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
-                   <b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
+        			<!-- single slide -->
+        			<div class="item" style="background-image: url(/brand/img/img-10.jpg);">
+        				<div class="carousel-caption">
+        					<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
+        					<b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
 
-                   <ul class="social-links text-center">
-                      <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                      <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                      <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                      <li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-                  </ul>
-              </div>
-          </div>
-          <!-- end single slide -->
+        					<ul class="social-links text-center">
+        						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+        					</ul>
+        				</div>
+        			</div>
+        			<!-- end single slide -->
 
-          <!-- single slide -->
-          <div class="item" style="background-image: url(/brand/img/img-7.jpg);">
-            <div class="carousel-caption">
-                <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
-                <b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
+        			<!-- single slide -->
+        			<div class="item" style="background-image: url(/brand/img/img-7.jpg);">
+        				<div class="carousel-caption">
+        					<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Finance<span></span></h2>
+        					<b><h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Empréstimos e Financiamento</span> </h3></b>
 
-                <ul class="social-links text-center">
-                    <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
-                    <li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- end single slide -->
+        					<ul class="social-links text-center">
+        						<li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+        						<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+        					</ul>
+        				</div>
+        			</div>
+        			<!-- end single slide -->
 
-    </div>
-    <!-- End Wrapper for slides -->
+        		</div>
+        		<!-- End Wrapper for slides -->
 
-</div>
-</section>
+        	</div>
+        </section>
 
         <!--
         End Home SliderEnd

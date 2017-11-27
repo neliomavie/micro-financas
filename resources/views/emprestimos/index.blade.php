@@ -46,7 +46,8 @@
 										@foreach($emprestimos as $emprestimo)
 										<tr>
 											<td>#</td>
-											<td>{{$emprestimo->cliente}}</td>
+											<td>{{ \App\Cliente::find($emprestimo->cliente_id)->nome}}</td>
+
 											<td>{{$emprestimo->modalidade}}</td>
 											<td>{{$emprestimo->created_at}}</td>
 											<td>{{$emprestimo->data_devolucao}}</td>

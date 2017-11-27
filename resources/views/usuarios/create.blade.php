@@ -23,7 +23,7 @@
 					<form action="/usuarios" method="POST">
 						{{ csrf_field() }}
 
-						<input name="estado" type="hidden" value="off" class="form-control pull-right" id="estado">
+						<input name="estado" type="hidden" value="On" class="form-control pull-right" id="estado">
 
 						<div class="row">
 							<div class="col-lg-6">

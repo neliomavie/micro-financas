@@ -159,9 +159,11 @@
                         <button class="btn btn-lg btn-primary btn-block" type="submit">
                             Entrar
                         </button>
-                        <label class="checkbox pull-left">
-                            <input type="checkbox" value="remember-me">
-                            Remember me
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            Esqueceu sua senha?
+                        </a>
+                        <label>
+                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                         </label>
                         <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                     </form>

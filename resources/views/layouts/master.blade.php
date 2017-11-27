@@ -57,7 +57,7 @@
         			<!-- /responsive nav button -->
 
         			<!-- logo -->
-        			<a class="navbar-brand" href="#body">
+        			<a class="navbar-brand" href="/">
         				<h1 id="logo">
         					<img src="/brand/img/logo-5.png" alt="Brandi">
         				</h1>

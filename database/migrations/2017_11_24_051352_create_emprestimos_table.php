@@ -13,7 +13,7 @@ class CreateEmprestimosTable extends Migration
      */
     public function up()
     {
-        Schema::create('emprestimos', function (Blueprint $table) { 
+        Schema::create('emprestimos', function (Blueprint $table) {
             $table->increments('id');
             $table->String('descricao');
             $table->double('valor');
@@ -21,7 +21,7 @@ class CreateEmprestimosTable extends Migration
             $table->String('estado');
             $table->String('data_devolucao');
 
-            $table->String('cliente');
+            $table->String('cliente_id');
 
             $table->integer('usuario_id')->unsigned();
             $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');

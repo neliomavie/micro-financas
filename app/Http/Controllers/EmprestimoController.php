@@ -50,9 +50,12 @@ class EmprestimoController extends Controller
             'valor' => 'numeric|required'
         ]);
 
-        Emprestimo::create($request->all());
+        // dd($request);
 
-        return redirect('emprestimos');
+        Emprestimo::create($request->all());
+        $emprestimos = Emprestimo::all();
+
+        return view('emprestimos.index', compact('emprestimos'));
     }
 
     /**

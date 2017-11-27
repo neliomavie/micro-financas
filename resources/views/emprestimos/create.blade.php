@@ -116,9 +116,9 @@
 										<div class="input-group-addon">
 											<i class="fa  fa-user"></i>
 										</div>
-										<select id="cliente" name="cliente" class="form-control">
+										<select id="cliente" name="cliente_id" class="form-control">
 											@foreach($clientes as $cliente)
-											<option>{{$cliente->nome}}</option>
+											<option value="{{$cliente->id}}">{{$cliente->nome}}</option>
 											@endforeach
 										</select>
 									</div>

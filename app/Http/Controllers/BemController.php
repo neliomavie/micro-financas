@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cliente;
 
 class BemController extends Controller
 {
@@ -13,7 +14,8 @@ class BemController extends Controller
      */
     public function index()
     {
-        return view('bens.index');
+        $clientes = Cliente::all();
+        return view('bens.index', compact('clientes'));
     }
 
     /**
@@ -23,7 +25,8 @@ class BemController extends Controller
      */
     public function create()
     {
-        return view('bens.create');
+        $clientes = Cliente::all();
+        return view('bens.create', compact('clientes'));
     }
 
     /**
