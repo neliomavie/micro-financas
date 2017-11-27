@@ -23,7 +23,7 @@ class BemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() 
     {
         $clientes = Cliente::all();
         return view('bens.create', compact('clientes'));
