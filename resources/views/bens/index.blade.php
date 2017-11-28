@@ -42,7 +42,7 @@
 										</tr>
 										@foreach($bens as $bem)
 										<tr>
-											<td>#</td>
+											<td>{{($total++)}}</td>
 											<td>{{$bem->nome}}</td>
 											<td>{{$bem->descricao}}</td>
 											<td>{{ \App\Cliente::find($bem->cliente_id)->nome}}</td>

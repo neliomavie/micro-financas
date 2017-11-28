@@ -17,7 +17,8 @@ class BemController extends Controller
     {
         $clientes = Cliente::all();
         $bens = Bem::all();
-        return view('bens.index', compact('clientes','bens'));
+        $total = 1;
+        return view('bens.index', compact('clientes','bens','total'));
     }
 
     /**

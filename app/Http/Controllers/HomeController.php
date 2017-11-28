@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Emprestimo;
 use App\Cliente;
 use App\User;
+use DB;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,18 @@ class HomeController extends Controller
         $clientes = Cliente::all();
         $emprestimos = Emprestimo::all();
 
-        return view('home', compact('usuarios','clientes', 'emprestimos'));
+        $user_id= Auth()->user()->id;
+        $pr_emprestimos=DB::select("call pr_emprestimos($user_id)");
+
+        return view('home', compact('usuarios','clientes', 'emprestimos', 'pr_emprestimos'));
+    }
+
+
+    public function relatorio()
+    {
+        $user_id= Auth()->user()->id;
+        $pr_emprestimos=DB::select("call pr_emprestimos($user_id)");
+
+        return view('home', compact('pr_emprestimos'));
     }
 }
