@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Emprestimo;
+use App\Cliente;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $usuarios = User::all();
+        $clientes = Cliente::all();
+        $emprestimos = Emprestimo::all();
+
+        return view('home', compact('usuarios','clientes', 'emprestimos'));
     }
 }

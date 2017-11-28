@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
+use App\Bem;
 
 class BemController extends Controller
 {
@@ -15,7 +16,8 @@ class BemController extends Controller
     public function index()
     {
         $clientes = Cliente::all();
-        return view('bens.index', compact('clientes'));
+        $bens = Bem::all();
+        return view('bens.index', compact('clientes','bens'));
     }
 
     /**
@@ -25,8 +27,15 @@ class BemController extends Controller
      */
     public function create() 
     {
+
+
         $clientes = Cliente::all();
-        return view('bens.create', compact('clientes'));
+        if(count($clientes)==0){
+            return view('clientes.create');
+        }else{
+            return view('bens.create', compact('clientes'));
+        }
+        
     }
 
     /**
@@ -37,7 +46,13 @@ class BemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+
+        Bem::create($request->all());
+
+        $clientes = Cliente::all();
+        $bens = Bem::all();
+        return view('bens.index', compact('clientes','bens'));
     }
 
     /**

@@ -25,3 +25,7 @@ Route::resource('/usuarios', 'UsuarioController')->middleware('autenticacao');
 
 Route::resource('/bens', 'BemController')->middleware('autenticacao');
 
+
+// Ajax
+Route::get('/ajax/livesearch','DemoController@liveSearch');        
+

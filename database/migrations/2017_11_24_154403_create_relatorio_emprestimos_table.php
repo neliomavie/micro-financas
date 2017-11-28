@@ -15,7 +15,8 @@ class CreateRelatorioEmprestimosTable extends Migration
     {
         Schema::create('relatorio_emprestimos', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('cliente_id');
+            $table->integer('cliente_id')->unsigned();
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->double('valor');
             $table->date('data_devolucao');
             $table->timestamps();
