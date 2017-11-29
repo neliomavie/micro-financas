@@ -126,7 +126,7 @@
 				<li class="header"><i class="fa fa-dashboard"></i> Menu</li>
 
 				<li class=" active">
-					<a href="#">
+					<a href="/home">
 						<i class="fa fa-th-large "></i> <span>Navegação</span>
 						<span class="pull-right-container">
 						</span>
