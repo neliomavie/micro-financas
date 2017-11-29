@@ -27,5 +27,7 @@ Route::resource('/bens', 'BemController')->middleware('autenticacao');
 
 
 // Ajax
-Route::get('/ajax/livesearch','DemoController@liveSearch');        
+Route::get('/ajax/livesearch','DemoController@liveSearch'); 
+
+Route::any( '/bens/search', 'SearchController@bensSearch');
 

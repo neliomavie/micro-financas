@@ -21,17 +21,24 @@
 									<h3 class="box-title">Lista de Bens</h3>
 
 									<div class="box-tools">
-										<div class="input-group input-group-sm" style="width: 150px;">
-											<input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-
-											<div class="input-group-btn">
-												<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-											</div>
+										<div class="input-group input-group-sm" style="width: 200px;">
+											<form action="/bens/search" method="POST" role="search">
+												{{ csrf_field() }}
+												<div class="input-group">
+													<input type="text" class="form-control" name="q"
+													placeholder="Search Bens"> <span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div>
 								<!-- /.box-header -->
 								<div class="box-body table-responsive no-padding">
+									@if(isset($bens))
 									<table class="table table-hover">
 										<tr>
 											<th>#</th>
@@ -40,6 +47,7 @@
 											<th>Nome Do Proprietário</th>
 											<th>Acções</th>
 										</tr>
+
 										@foreach($bens as $bem)
 										<tr>
 											<td>{{($total++)}}</td>
@@ -52,10 +60,13 @@
 										</tr>
 										@endforeach
 									</table>
+									{!! $bens->render() !!}
+									@endif
 								</div>
 								<!-- /.box-body -->
 							</div>
 							<!-- /.box -->
+
 						</div>
 					</div>
 				</div>

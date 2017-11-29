@@ -16,7 +16,7 @@ class BemController extends Controller
     public function index()
     {
         $clientes = Cliente::all();
-        $bens = Bem::all();
+        $bens = Bem::paginate(2);
         $total = 1;
         return view('bens.index', compact('clientes','bens','total'));
     }

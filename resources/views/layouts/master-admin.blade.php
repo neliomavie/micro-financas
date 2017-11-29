@@ -28,6 +28,16 @@
   	<!-- bootstrap wysihtml5 - text editor -->
   	<link rel="stylesheet" href="/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+
+
+  	<link href="/StreamTable/exemples/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+  	<link href="/StreamTable/exemples/assets/css/style.css" media="screen" rel="stylesheet" type="text/css">
+  	<script src="/StreamTable/exemples/assets/js/jquery.min.js" type="text/javascript"></script>
+  	<script src="/vendors/mustache.js" type="text/javascript"></script>
+  	<script src="/StreamTable/stream_table.js" type="text/javascript"></script>
+  	<script src="/StreamTable/exemples/movie_data.js" type="text/javascript"></script>
+  	<script src="/StreamTable/exemples/index.js" type="text/javascript"></script>
+
   	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
