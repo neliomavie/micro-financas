@@ -18,7 +18,7 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">Clientes</h3>
+                                    <h3 class="box-title">Lista de Clientes</h3>
 
                                     <div class="box-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -52,12 +52,33 @@
                                             <td>{{$cliente->bi}}</td>
                                             <td>{{$cliente->telefone}}</td>
                                             <td>{{$cliente->estado}}</td>
+                                            
                                             <td>
-                                                @if($cliente->estado=='Off')
-                                                <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</a>
-                                                @else
-                                                <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</a>
-                                                @endif
+
+                                                {{-- <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-success" type="submit">
+                                                    <i class="fa fa-pencil"></i>  editar
+                                                </a>
+
+                                                <a href="/clientes/{{$cliente->id}}" class="btn btn-danger" type="submit">
+                                                    <i class="fa fa-pencil"></i>  Apagar
+                                                </a> --}}
+                                                <form action="/clientes/{{$cliente->id}}/edit" method="GET" class="pull-right" style="margin-left: 25px">
+
+                                                    {{ csrf_field() }}
+
+
+                                                    <button class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Editar</button>
+                                                </form>
+
+                                                <form action="/clientes/{{ $cliente->id }}" method="POST" class="pull-right" style="margin-left: 25px">
+
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+
+
+                                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Apagar</button>
+                                                </form>
+
                                             </td>
                                         </tr>
                                         @endforeach

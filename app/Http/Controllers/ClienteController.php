@@ -37,7 +37,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
 
-        
+
         // dd($request);
         Cliente::create($request->all());
 
@@ -65,9 +65,9 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        // $article = Article::findOrFail($id);
+        $cliente = Cliente::findOrFail($id);
 
-        // return view('articles.edit', compact('article'));
+        return view('clientes.edit', compact('cliente'));
     }
 
     /**
@@ -79,15 +79,12 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $article = Article::findOrFail($id);
 
-        // if (! isset($request->live)) {
-        //     $article -> update(array_merge($request->all(), ['live' => false]));
-        // } else {
-        //     $article -> update($request->all());
-        // }
+        $cliente = Cliente::findOrFail($id);
 
-        // return redirect('/articles');
+        $cliente -> update($request->all());
+
+        return redirect('/clientes');
 
     }
 
@@ -99,6 +96,8 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cliente::destroy($id);
+
+        return redirect('/clientes');
     }
 }

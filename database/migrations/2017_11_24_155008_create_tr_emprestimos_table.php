@@ -20,7 +20,7 @@ class CreateTrEmprestimosTable extends Migration
 
         DB::unprepared('
             CREATE TRIGGER tr_relatorio_emprestimo AFTER INSERT ON `emprestimos` FOR EACH ROW
-            INSERT INTO relatorio_emprestimos (`cliente_id`, `valor`,`data_devolucao`) VALUES (NEW.cliente_id, NEW.valor, NEW.data_devolucao);
+            INSERT INTO relatorio_emprestimos (`cliente_id`, `valor`,`data_devolucao`) VALUES (NEW.cliente_id, NEW.valor, NEW.data_devolucao)
             ');
     }
 

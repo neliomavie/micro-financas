@@ -31,3 +31,5 @@ Route::get('/ajax/livesearch','DemoController@liveSearch');
 
 Route::any( '/bens/search', 'SearchController@bensSearch');
 
+
+
