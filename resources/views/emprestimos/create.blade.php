@@ -118,7 +118,13 @@
 										</div>
 										<select id="cliente" name="cliente_id" class="form-control">
 											@foreach($clientes as $cliente)
+
+											@if($cliente->estado==='On')
+
 											<option value="{{$cliente->id}}">{{$cliente->nome}}</option>
+											
+											@endif
+
 											@endforeach
 										</select>
 									</div>
