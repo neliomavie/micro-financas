@@ -53,7 +53,7 @@
                                             <td>{{$cliente->telefone}}</td>
                                             <td>{{$cliente->estado}}</td>
                                             <td>
-                                                @if($cliente->estado=='off')
+                                                @if($cliente->estado=='Off')
                                                 <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-success" type="submit"><i class="fa fa-toggle-off"></i>  On</a>
                                                 @else
                                                 <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-danger" type="submit"><i class="fa fa-toggle-off"></i>  Off</a>
